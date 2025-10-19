@@ -11,7 +11,9 @@ class PostController extends Controller
     public function createPost(Request $request){
         $incomingFields = $request->validate([
             'title' => 'required',
-            'body' => 'required'
+            'body' => 'required'            
+
+            
         ]);
 
         $incomingFields['title'] = strip_tags($incomingFields['title']);
